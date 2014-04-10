@@ -35,9 +35,11 @@ class MongoManifest extends Manifest
 
             $m->name = $module->name();
             $m->enabled = $module->enabled();
-//            $m->provider = $module->provider();
             $m->order = $module->order;
             $m->group = $module->group;
+            $m->label = $module->label;
+            $m->version = $module->version;
+            $m->default_permissions = $module->default_permissions;
 
             $m->save();
         }

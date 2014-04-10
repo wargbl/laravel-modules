@@ -34,7 +34,12 @@ class Finder {
 	{
 		$this->app      = $app;
 		$this->modules  = new ModuleCollection($app);
-		$this->manifest = new Manifest($app);
+        if ($this->app['config']->get('modules::storage') == 'database') {
+            $this->manifest = new MongoManifest($app);
+        } else {
+            $this->manifest = new Manifest($app);
+        }
+
 	}
 
 	/**
