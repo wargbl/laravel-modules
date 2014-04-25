@@ -76,6 +76,12 @@ class Module extends \Illuminate\Support\ServiceProvider
     public $default_permissions;
 
     /**
+     * which category should the module appear in
+     * @var string
+     */
+    public $category;
+
+    /**
      * Initialize a module
      * @param Application $app
      */
@@ -148,6 +154,12 @@ class Module extends \Illuminate\Support\ServiceProvider
             $this->definition['default_permissions'] = $this->default_permissions = [];
         } else {
             $this->definition['default_permissions'] = $this->default_permissions = $this->definition['default_permissions'];
+        }
+
+        if (!isset($this->definition['category'])) {
+            $this->definition['category'] = $this->category = [];
+        } else {
+            $this->definition['category'] = $this->category = $this->definition['category'];
         }
 
         // Add group to definition

@@ -40,9 +40,11 @@ class MongoManifest extends Manifest
             $m->label = $module->label;
             $m->version = $module->version;
             $m->default_permissions = $module->default_permissions;
+            $m->category = $module->category;
 
             $m->save();
         }
+
         return $this->data;
     }
 
