@@ -1,7 +1,7 @@
 {
     "name": "creolab/laravel-modules",
     "keywords": ["modules", "laravel"],
-    "description": "Application specific modules in Laravel 4",
+    "description": "Application specific modules in Laravel 5",
     "homepage": "http://creolab.hr",
     "authors": [
         {
@@ -11,10 +11,8 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "laravel/framework": "~4",
-        "way/generators": "~1",
-        "zizaco/mongolid": "dev-master",
-        "zizaco/mongolid-laravel": "dev-master"
+        "laravel/framework": "~5",
+        "way/generators": "~1"
     },
     "autoload": {
         "psr-4": {
