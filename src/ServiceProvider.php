@@ -14,8 +14,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('creolab/laravel-modules', 'modules', __DIR__);
-
 		// Register commands
 		$this->bootCommands();
 
